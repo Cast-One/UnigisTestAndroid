@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UnigisTest</string>
+    <string name="movie_box_title">MovieBox</string>
+    <string name="playing_now_section">Playing Now</string>
+    <string name="most_popular_section">Most popular</string>
+
+</resources>

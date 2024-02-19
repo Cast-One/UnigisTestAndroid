@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_header">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/unlock"
+            android:paddingVertical="15dp"
+            android:text="@string/movie_box_title"
+            android:textAllCaps="true"
+            android:textColor="@color/yellow"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_playingNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/dark_gray"
+        android:layout_below="@id/layout_header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/playing_now_section"
+            android:textColor="@color/yellow"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPlayingNow"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layoutManager="LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_movie_now" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_mostPopular"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/dark_gray"
+        android:layout_below="@id/layout_playingNow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/most_popular_section"
+            android:textColor="@color/yellow"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMostPopular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_most_popular" />
+
+    </LinearLayout>
+
+</RelativeLayout>
